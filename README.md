@@ -55,8 +55,9 @@ This service manages all the Inventory data like Add, update, delete and find a 
 
 2. Execute below command for all the modules individually
 
-    mvn clean install -DskipTests
-    mvn spring-boot:run
+    > mvn clean install -DskipTests
+    
+    > mvn spring-boot:run
 
 3. Now you can run the application using swagger UI:
 4. Open this url in any browser
