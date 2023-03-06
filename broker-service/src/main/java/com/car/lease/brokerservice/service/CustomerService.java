@@ -1,8 +1,8 @@
 package com.car.lease.brokerservice.service;
 
-import java.util.List;
-
 import com.car.lease.brokerservice.model.dto.CustomerDTO;
+
+import java.util.List;
 /**
  * This interface keeps all customer service for CRUD operation.
  * 

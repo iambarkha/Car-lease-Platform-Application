@@ -1,12 +1,5 @@
 package com.car.lease.authservice.service.impl;
 
-import java.sql.Timestamp;
-
-import org.mapstruct.factory.Mappers;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-
 import com.car.lease.authservice.mapper.CustomDTOMapperInterface;
 import com.car.lease.authservice.model.AuthenticationStatus;
 import com.car.lease.authservice.model.LoginRequest;
@@ -15,8 +8,12 @@ import com.car.lease.authservice.model.dto.UserRequest;
 import com.car.lease.authservice.model.dto.UserResponse;
 import com.car.lease.authservice.repository.UserRepository;
 import com.car.lease.authservice.service.UserService;
-
 import lombok.extern.slf4j.Slf4j;
+import org.mapstruct.factory.Mappers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.sql.Timestamp;
 
 @Service
 @Slf4j

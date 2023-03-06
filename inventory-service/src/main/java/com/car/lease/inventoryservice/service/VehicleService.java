@@ -1,8 +1,8 @@
 package com.car.lease.inventoryservice.service;
 
-import java.util.List;
-
 import com.car.lease.inventoryservice.model.dto.VehicleDTO;
+
+import java.util.List;
 /**
  * This interface keeps all service to maintain Vehicle
  * inventory

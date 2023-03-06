@@ -1,43 +1,35 @@
-server:  port: 9100
+server:
+  port: 9100
 
 spring:
   application:
     name: api-gateway
   cloud:
-    gateway:      #discovery.locator.enabled: true
-      routes:        - id: auth          uri: http://localhost:8181/          #uri: lb://auth          predicates:            - Path= /auth/**          filters:            - AuthenticationFilter            - RewritePath= /auth/(?<path>.*), /$\{path}
-        - id: broker
-          uri: http://localhost:7000/          #uri: lb://broker
+    gateway:
+      routes:
+        - id: auth
+          uri: http://localhost:8181/
           predicates:
-            - Path= /broker/**            #- Path= /lease/**
-          filters:            - AuthenticationFilter
-            - RewritePath=/broker/(?<path>.*), /$\{path}#        - id: lease#          uri: http://localhost:7000/#          #uri: lb://lease#          predicates:#            - Path= /lease/**#          filters:#            - AuthenticationFilter#            - RewritePath=/lease/(?<path>.*), /$\{path}        - id: inventory          uri: http://localhost:7001/          #uri: lb://inventory          predicates:            - Path= /inventory/**          filters:            - AuthenticationFilter            - RewritePath=/inventory/(?<path>.*), /$\{path}                        
-        
-
-
-#  cloud:
-#    gateway:
-#      routes:
-#        - id: car-info-service
-#          uri: http://localhost:8082/
-#          predicates:
-#            - Path=/api/car-info-service/**
-#          filters:
-#            - AuthenticationFilter
-#        - id: car-listing-service
-#          uri: http://localhost:8081/
-#          predicates:
-#            - Path=/api/car-listing-service/**
-#          filters:
-#            - AuthenticationFilter
-#        - id: car-apigateway
-#          uri: http://localhost:8008/
-#          predicates:
-#            - Path=/api-gateway/**
-#          filters:
-#            - AuthenticationFilter
-
-
+            - Path= /auth/**
+          filters:
+            - AuthenticationFilter
+            - RewritePath= /auth/(?<path>.*), /$\{path}
+        - id: broker
+          uri: http://localhost:7000/
+          predicates:
+            - Path= /broker/**
+            #- Path= /lease/**
+          filters:
+            - AuthenticationFilter
+            - RewritePath=/broker/(?<path>.*), /$\{path}
+        - id: inventory
+          uri: http://localhost:7001/
+          #uri: lb://inventory
+          predicates:
+            - Path= /inventory/**
+          filters:
+            - AuthenticationFilter
+            - RewritePath=/inventory/(?<path>.*), /$\{path}
 eureka:
   client:
     enabled: true

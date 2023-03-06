@@ -1,20 +1,18 @@
 package com.car.lease.brokerservice.service.impl;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.mapstruct.factory.Mappers;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.car.lease.brokerservice.exception.BrokerSystemException;
 import com.car.lease.brokerservice.mapper.CustomDTOMapperInterface;
 import com.car.lease.brokerservice.model.Customer;
 import com.car.lease.brokerservice.model.dto.CustomerDTO;
 import com.car.lease.brokerservice.repository.CustomerRepository;
 import com.car.lease.brokerservice.service.CustomerService;
-
 import lombok.extern.slf4j.Slf4j;
+import org.mapstruct.factory.Mappers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j

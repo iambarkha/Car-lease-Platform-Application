@@ -1,8 +1,11 @@
 package com.car.lease.authservice.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
-
+import com.car.lease.authservice.mapper.CustomDTOMapperInterface;
+import com.car.lease.authservice.model.User;
+import com.car.lease.authservice.model.dto.UserRequest;
+import com.car.lease.authservice.model.dto.UserResponse;
+import com.car.lease.authservice.repository.UserRepository;
+import com.car.lease.authservice.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,12 +14,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.car.lease.authservice.mapper.CustomDTOMapperInterface;
-import com.car.lease.authservice.model.User;
-import com.car.lease.authservice.model.dto.UserRequest;
-import com.car.lease.authservice.model.dto.UserResponse;
-import com.car.lease.authservice.repository.UserRepository;
-import com.car.lease.authservice.service.impl.UserServiceImpl;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
 @DisplayName("UserService - Unit Test")
 @ExtendWith(MockitoExtension.class)

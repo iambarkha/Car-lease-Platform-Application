@@ -1,22 +1,16 @@
 package com.car.lease.authservice.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.car.lease.authservice.model.AuthenticationStatus;
 import com.car.lease.authservice.model.LoginRequest;
 import com.car.lease.authservice.model.dto.UserRequest;
 import com.car.lease.authservice.model.dto.UserResponse;
 import com.car.lease.authservice.service.UserService;
 import com.car.lease.authservice.util.JwtUtil;
-
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 
 /**

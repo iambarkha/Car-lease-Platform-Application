@@ -1,10 +1,6 @@
 package com.car.lease.cloudgateway.filter;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-
+import com.car.lease.cloudgateway.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -14,10 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.util.SerializationUtils;
-
-import com.car.lease.cloudgateway.util.JwtUtil;
-
 import reactor.core.publisher.Flux;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 @Component
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config>{

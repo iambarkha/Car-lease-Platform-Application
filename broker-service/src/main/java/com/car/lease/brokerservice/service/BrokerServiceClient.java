@@ -23,7 +23,6 @@ public class BrokerServiceClient {
 	 */
 	public <R> ResponseEntity<R> getRequestExchange(String url, Class<R> responseClass, String token) {
 		HttpHeaders headers = new HttpHeaders();
-		//headers.add("Authorization", token);
 		headers.set("Authorization",token);
 		HttpEntity request = new HttpEntity(headers);
 

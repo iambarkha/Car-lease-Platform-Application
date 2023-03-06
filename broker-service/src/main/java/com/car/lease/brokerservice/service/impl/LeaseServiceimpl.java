@@ -1,17 +1,15 @@
 package com.car.lease.brokerservice.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
 import com.car.lease.brokerservice.exception.BrokerSystemException;
 import com.car.lease.brokerservice.model.LeaseRequest;
 import com.car.lease.brokerservice.model.LeaseResponse;
 import com.car.lease.brokerservice.model.dto.VehicleDTO;
 import com.car.lease.brokerservice.service.BrokerServiceClient;
 import com.car.lease.brokerservice.service.LeaseService;
-
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j

@@ -1,15 +1,10 @@
 package com.car.lease.inventoryservice.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
+import com.car.lease.inventoryservice.exception.InventorySystemException;
+import com.car.lease.inventoryservice.model.Vehicle;
+import com.car.lease.inventoryservice.model.dto.VehicleDTO;
+import com.car.lease.inventoryservice.repository.VehicleRepository;
+import com.car.lease.inventoryservice.service.impl.VehicleServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,11 +13,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.car.lease.inventoryservice.exception.InventorySystemException;
-import com.car.lease.inventoryservice.model.Vehicle;
-import com.car.lease.inventoryservice.model.dto.VehicleDTO;
-import com.car.lease.inventoryservice.repository.VehicleRepository;
-import com.car.lease.inventoryservice.service.impl.VehicleServiceImpl;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @DisplayName("VehicleService - Unit Test")
 @ExtendWith(MockitoExtension.class)
